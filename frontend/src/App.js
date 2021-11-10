@@ -2,6 +2,7 @@ import { Button, makeStyles, Modal, Input } from '@material-ui/core';
 import React, {useState, useEffect} from 'react'
 import './App.css';
 import Post from './Post';
+import ImageUpload from './ImageUpload';
 
 const BASE_URL = 'http://localhost:8000/'
 
@@ -95,7 +96,7 @@ function App() {
   }, [])
 
   const signIn = (event) => {
-    event.preventDefault();
+    event?.preventDefault();
 
     let formData = new FormData();
     formData.append('username', username)
@@ -136,7 +137,37 @@ function App() {
   }
 
   const signUp = (event) => {
+    event?.preventDefault();
 
+    const json_string = JSON.stringify({
+      username: username,
+      email: email,
+      password: password
+    })
+    
+    const requestOption = {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: json_string
+    }
+
+    fetch(BASE_URL + 'user/', requestOption)
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        }
+        throw response
+      })
+      .then(data => {
+        // console.log(data);
+        signIn();
+      })
+      .catch(error => {
+        console.log(error);
+        alert(error);
+      })
+
+    setOpenSignUp(false)
   }
 
   return (
@@ -208,7 +239,17 @@ function App() {
         <img className="app_headerImage"
           src="https://cdn.icon-icons.com/icons2/2699/PNG/512/instagram_logo_icon_170643.png"
           alt="Instagram"/>
-
+        {
+        authToken ? (
+          <ImageUpload
+            authToken={authToken}
+            authTokenType={authTokenType}
+            userId={userId}
+          />
+        ) : (
+          <h3> You need to login to upload images </h3>
+        )
+        }
         {authToken ? (
           <Button onClick={() => signOut()}>Logout</Button>
         ) : (
@@ -224,6 +265,9 @@ function App() {
           posts.map(post => (
             <Post
             post = {post}
+            authToken = {authToken}
+            authTokenType = {authTokenType}
+            username = {username}
             />
           ))
         }
