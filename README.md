@@ -24,3 +24,21 @@
     Navigate to / Перейдите по [http://localhost:3000](http://localhost:3000)
     
 3. Sign up, select an image, add a caption and click Upload. / Зарегистрироваться, выбрать изображение, добавить надпись и нажать загрузить.
+
+## Libraries used / Использованные библиотеки:
+
+    ```sh
+    fastapi
+    uvicorn
+    sqlalchemy
+    passlib
+    bcrypt
+    python-multipart
+    aiofiles
+    python-jose
+    ```
+    ---
+    ```sh
+    react.js
+    material-ui/core
+    ```
