@@ -1,5 +1,7 @@
 # Instagram Clone [FastAPI/React]
 
+![FastAPI](https://yadi.sk/i/HtAWnfXaw9Ipmw)
+
 ## How to run and test it / Как запустить и протестировать приложение
 
 1. Run the server-side FastAPI app in one terminal window / Запустить бэкэнд часть FastAPI в одном окне терминала:
