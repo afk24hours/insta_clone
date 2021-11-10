@@ -1,6 +1,6 @@
 # Instagram Clone [FastAPI/React]
 
-![FastAPI](https://yadi.sk/i/HtAWnfXaw9Ipmw)
+![FastAPI](https://i.postimg.cc/XYFMRbH2/2021-11-10-17-33-00.png)
 
 ## How to run and test it / Как запустить и протестировать приложение
 
