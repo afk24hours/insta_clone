@@ -1,4 +1,4 @@
-import { Button, makeStyles, Modal, Input } from '@material-ui/core';
+import { Button, makeStyles, Modal, Input, Card, Avatar, Box, Typography, IconButton, Chip, Switch, Divider} from '@material-ui/core';
 import React, {useState, useEffect} from 'react'
 import './App.css';
 import Post from './Post';
@@ -251,7 +251,15 @@ function App() {
         )
         }
         {authToken ? (
+          <div className="app_headerUsername">
+          <Card className="app_headerUsernameCard">
+            <Box sx={{ p: 1, display: 'inline-flex', justifyContent: "space-between", alignItems: "center"}}>
+              <Avatar variant="circular" src="avatar1.jpg" />
+              <Typography fontWeight={500} alignRight={true}>{username}</Typography>
+            </Box>
+          </Card>
           <Button onClick={() => signOut()}>Logout</Button>
+          </div>
         ) : (
           <div>
             <Button onClick={() => setOpenSignIn(true)}>Login</Button>
