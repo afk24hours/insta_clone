@@ -27,7 +27,7 @@
 
 ## Libraries used / Использованные библиотеки:
 
-    ```sh
+    
     BACKEND
     
     fastapi
@@ -43,4 +43,4 @@
     
     react.js
     material-ui/core
-    ```
+    
