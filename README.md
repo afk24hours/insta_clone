@@ -9,7 +9,7 @@
     $ python3.9 -m venv env
     $ source env/bin/activate
     (env)$ pip install -r requirements.txt
-    (env)$ python uvicorn main:app --reload
+    (env)$ uvicorn main:app --reload
     ```
 
     Navigate to / Перейдите по [http://localhost:8000](http://localhost:8000)
@@ -18,8 +18,7 @@
 
     ```sh
     $ cd frontend
-    $ npm install
-    $ npm run start
+    $ npm start
     ```
 
     Navigate to / Перейдите по [http://localhost:3000](http://localhost:3000)
