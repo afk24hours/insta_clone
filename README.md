@@ -12,7 +12,7 @@
     (env)$ python main.py
     ```
 
-    Navigate to [http://localhost:8000](http://localhost:8000)
+    Navigate to / Перейдите по [http://localhost:8000](http://localhost:8000)
 
 2. Run the client-side React app in a different terminal window / Запустить фронтэнд часть React во втором окне терминала:
 
@@ -22,6 +22,6 @@
     $ npm run start
     ```
 
-    Navigate to [http://localhost:3000](http://localhost:3000)
+    Navigate to / Перейдите по [http://localhost:3000](http://localhost:3000)
     
 3. Sign up, select an image, add a caption and click Upload. / Зарегистрироваться, выбрать изображение, добавить надпись и нажать загрузить.
