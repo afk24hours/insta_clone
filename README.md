@@ -28,6 +28,8 @@
 ## Libraries used / Использованные библиотеки:
 
     ```sh
+    BACKEND
+    
     fastapi
     uvicorn
     sqlalchemy
@@ -36,9 +38,9 @@
     python-multipart
     aiofiles
     python-jose
-    ```
-    ---
-    ```sh
+    
+    FRONTEND
+    
     react.js
     material-ui/core
     ```
