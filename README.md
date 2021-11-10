@@ -27,8 +27,7 @@
 
 ## Libraries used / Использованные библиотеки:
 
-    
-    BACKEND
+1. Backend
     
     fastapi
     uvicorn
@@ -39,7 +38,7 @@
     aiofiles
     python-jose
     
-    FRONTEND
+2. Frontend
     
     react.js
     material-ui/core
